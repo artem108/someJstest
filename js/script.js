@@ -2,14 +2,19 @@ document.body.onload = function() {
 
 document.getElementById('button').onclick = function addText() {
 
-var newText, createSpan;
+var newText, newLi, list;
 newText = document.getElementById('input').value;
+newLi = document.createElement('li');
+list = document.getElementById('list');
 
-createSpan = document.createElement('div');
-div.className = "div";
+list.appendChild(newLi);
 
-.document.getElementsByClassName('div').innerHTML = newText;
+newLi.innerHTML = newText;
 
+
+
+
+// document.getElementById('areaForText').innerHTML = newText;
+ // return addText;
 }}
-
 // пригодиться document.createElement(tag)
