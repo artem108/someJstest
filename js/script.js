@@ -1,22 +1,26 @@
 document.body.onload = function() {
+
 // take value input and create item
 
-var newLi, list;
+var newLi, list, aInNewLi;
 
 list = document.getElementById('list');
 newLi = document.createElement('li');
+aInNewLi = document.createElement('a');
+aInNewLi.id  = 'aInNewLi'
 
 document.getElementById('button').onclick = function addText() {
+
 var newText = document.getElementById('input').value;
 
 list.appendChild(newLi);
-newLi.innerHTML = newText;
+newLi.appendChild(aInNewLi)
+aInNewLi.innerHTML = newText;
 
 }
-
 // create button for li
 
-newLi.onclick = function createButton() {
+aInNewLi.onclick = function createButton() {
   // delete
   var removeLi = document.createElement('input');
 
@@ -47,6 +51,16 @@ newLi.onclick = function createButton() {
     save.type = 'button'
     save.value = 'save'
     newLi.appendChild(save);
+
+    var inputForEdit = document.createElement('input');
+
+    edit.id = 'inputForEdit'
+    edit.type = 'text'
+    var holdText = document.getElementById('aInNewLi').value;
+
+    inputForEdit.innerHTML = holdText;
+
+
 
   }
 
