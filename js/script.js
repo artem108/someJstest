@@ -58,12 +58,18 @@ newLi.appendChild(removeLi);
     newLi.appendChild(save);
 
     var inputForEdit = document.createElement('input');
-
     edit.id = 'inputForEdit'
     edit.type = 'text'
-    var holdText = document.getElementById('aInNewLi').value;
 
-    inputForEdit.innerHTML = holdText;
+    var holdText = document.getElementById('aInNewLi');
+
+    holdText.innerHTML = inputForEdit;
+
+    save.onclick = function () {
+      newLi.removeChild(save, edit);
+      // newLi.removeChild(edit);
+    }
+
   }
 }
 
