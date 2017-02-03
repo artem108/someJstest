@@ -2,33 +2,37 @@ document.body.onload = function() {
 
 // take value input and create item
 
-var newLi, list, aInNewLi;
-
-list = document.getElementById('list');
-newLi = document.createElement('li');
-aInNewLi = document.createElement('a');
-aInNewLi.id  = 'aInNewLi'
-
 document.getElementById('button').onclick = function addText() {
+  var newLi, aInNewLi, list, newText;
 
-var newText = document.getElementById('input').value;
+  newLi = document.createElement('li');
+  aInNewLi = document.createElement('a');
+  aInNewLi.id  = 'aInNewLi'
+  list = document.getElementById('list');
 
-list.appendChild(newLi);
-newLi.appendChild(aInNewLi)
+
+  list.appendChild(newLi);
+  newLi.appendChild(aInNewLi)
+
+  newText = document.getElementById('input').value;
+
 aInNewLi.innerHTML = newText;
 
-}
-// create button for li
+
+// _____________________________________________________________________________
+
 
 aInNewLi.onclick = function createButton() {
+
   // delete
+
   var removeLi = document.createElement('input');
+    removeLi.id = 'removeItem'
+    removeLi.type = 'button'
+    removeLi.value = 'delete'
 
-  removeLi.id = 'removeItem'
-  removeLi.type = 'button'
-  removeLi.value = 'delete'
+newLi.appendChild(removeLi);
 
-  newLi.appendChild(removeLi);
   // fuction for delete item
   removeLi.onclick = function remove() {
 
@@ -43,6 +47,7 @@ aInNewLi.onclick = function createButton() {
   edit.value = 'edit'
 
   newLi.appendChild(edit);
+
 
   edit.onclick = function edit() {
     // save change button
@@ -59,10 +64,8 @@ aInNewLi.onclick = function createButton() {
     var holdText = document.getElementById('aInNewLi').value;
 
     inputForEdit.innerHTML = holdText;
-
-
-
   }
+}
 
 }
 }
