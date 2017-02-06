@@ -50,6 +50,7 @@ newLi.appendChild(removeLi);
 
 
   edit.onclick = function edit() {
+
     // save change button
     var save = document.createElement('input');
     save.id = 'save'
@@ -58,16 +59,34 @@ newLi.appendChild(removeLi);
     newLi.appendChild(save);
 
     var inputForEdit = document.createElement('input');
-    edit.id = 'inputForEdit'
-    edit.type = 'text'
+      edit.id = 'inputForEdit'
+      edit.type = 'text'
+    newLi.appendChild(inputForEdit);
 
-    var holdText = document.getElementById('aInNewLi');
-
-    holdText.innerHTML = inputForEdit;
+    inputForEdit.innerHTML = newText;
 
     save.onclick = function () {
-      newLi.removeChild(save, edit);
-      // newLi.removeChild(edit);
+      function tgrfed () {
+
+        newLi.removeChild(save);
+
+      }
+      function rfdews() {
+        newLi.removeChild(edit);
+      }
+
+      saveText = inputForEdit.value;
+
+      // newLi.removeChild(aInNewLi);
+
+      var newA = document.createElement('a');
+
+      newLi.appendChild(newA)
+
+      newA.innerHTML = saveText;
+      console.log(saveText);
+
+
     }
 
   }
