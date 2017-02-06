@@ -19,6 +19,12 @@ document.getElementById('button').onclick = function addText() {
 aInNewLi.innerHTML = newText;
 
 
+       function functionName() {
+        document.getElementById('input').removeAttr('value');
+       }
+
+
+
 // _____________________________________________________________________________
 
 
