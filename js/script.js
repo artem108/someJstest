@@ -57,6 +57,14 @@ newLi.appendChild(removeLi);
 
   edit.onclick = function edit() {
 
+  function ygt () {
+
+    var li =  document.getElementsByTagName('li');
+    li.removeChild( newText, removeLi);
+
+
+  }
+
     // save change button
     var save = document.createElement('input');
     save.id = 'save'
@@ -72,14 +80,6 @@ newLi.appendChild(removeLi);
     inputForEdit.innerHTML = newText;
 
     save.onclick = function () {
-      function tgrfed () {
-
-        newLi.removeChild(save);
-
-      }
-      function rfdews() {
-        newLi.removeChild(edit);
-      }
 
       saveText = inputForEdit.value;
 
@@ -90,7 +90,15 @@ newLi.appendChild(removeLi);
       newLi.appendChild(newA)
 
       newA.innerHTML = saveText;
+
       console.log(saveText);
+
+    // if (save.onclick == true) {
+    //   aInNewLi.removeChild( newText, removeLi, edit, save);
+    //
+    // }
+
+      }
 
 
     }
@@ -98,5 +106,4 @@ newLi.appendChild(removeLi);
   }
 }
 
-}
 }
